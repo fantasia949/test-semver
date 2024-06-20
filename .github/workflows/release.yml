@@ -12,3 +12,5 @@ jobs:
 
       - name: semantic-release
         uses: ahmadnassri/action-semantic-release@v2
+        env:
+          GITHUB_TOKEN: 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
