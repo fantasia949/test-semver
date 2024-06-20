@@ -1,19 +1,15 @@
+---
 on:
   push:
     branches:
       - main
-      - name: beta
-        prerelease: true
-
 jobs:
   release:
     runs-on: ubuntu-latest
-
     steps:
       - name: checkout
         uses: actions/checkout@v2
-
       - name: semantic-release
         uses: ahmadnassri/action-semantic-release@v2
         env:
-          GITHUB_TOKEN: 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
+          GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
