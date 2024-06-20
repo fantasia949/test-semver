@@ -1,0 +1,14 @@
+on:
+  push:
+    branches: [ master, test-semver ]
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: checkout
+        uses: actions/checkout@v2
+
+      - name: semantic-release
+        uses: ahmadnassri/action-semantic-release@v2
