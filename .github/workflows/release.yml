@@ -1,6 +1,6 @@
 on:
   push:
-    branches: [ master, test-semver ]
+    branches: [ main, test-semver ]
 
 jobs:
   release:
