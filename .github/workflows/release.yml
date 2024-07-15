@@ -3,7 +3,10 @@ on:
   push:
     branches:
       - main
-      - test-semver
+      - name: staging
+        prerelease: true
+      - name: develop
+        channel: dev
 jobs:
   release:
     runs-on: ubuntu-latest
